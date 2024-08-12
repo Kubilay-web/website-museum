@@ -25,6 +25,10 @@ app.get("/things-to-do/family-activities", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "London-For-Kids", "index.html"));
 });
 
+app.get("/panolens", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "panolens", "index.html"));
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

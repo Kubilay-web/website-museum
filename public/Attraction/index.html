@@ -8,7 +8,9 @@
     </title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <meta name="referrer" content="unsafe-URL" />
+    <link rel="stylesheet" href="/public/Attraction/style.css" />
     <link
       rel="preconnect"
       href="https://cdn.londonandpartners.com/"
@@ -157,7 +159,26 @@
       name="msapplication-config"
       content="https://cdn.londonandpartners.com/webui/visit/favicons/browserconfig.xml"
     />
+
+    <style>
+      .panolens-container {
+        width: 70vw; /* Adjust width as needed */
+        height: auto; /* Adjust height as needed */
+        margin: auto;
+        background-color: #fff !important;
+        padding: 80px 0px 80px 0px !important;
+        /* Optional: Ensure the container has a background color or border for visibility */
+      }
+
+      canvas.panolens-canvas {
+        width: 700px !important; /* Adjust width as needed */
+        height: auto !important; /* Adjust height as needed */
+        margin: auto;
+        /* Optional: Ensure the container has a background color or border for visibility */
+      }
+    </style>
   </head>
+
   <body class="sticky-nav-init">
     <div class="scriptbox">
       <script async="" src="/public/Attraction/js/gtm.js"></script>
@@ -327,10 +348,6 @@
 
     <meta name="VIcurrentDateTime" content="638590542099179919" />
     <meta name="VirtualFolder" content="/" />
-    <script
-      type="text/javascript"
-      src="/layouts/system/VisitorIdentification.js"
-    ></script>
 
     <header class="header" role="banner">
       <ul class="skip-links">
@@ -773,13 +790,9 @@
       <div id="content">
         <div class="hero-section-cleared cf">
           <img
+            class="section"
             fetchpriority="high"
-            src="/public/Attraction/images/sightseeing-attractions-royal-spring-kensington-palace-1920x582.jpg"
-            srcset="
-              /public/Attraction/images/sightseeing-attractions-royal-spring-kensington-palace-1920x582.jpg    666w,
-              /public/Attraction/images/sightseeing-attractions-royal-spring-kensington-palace-1920x582_1.jpg 1385w,
-              /public/Attraction/images/sightseeing-attractions-royal-spring-kensington-palace-1920x582.jpg   1920w
-            "
+            src="/public/Attraction/images/virtual-london.jpg"
             sizes="100vw"
             width="1920"
             height="582"
@@ -792,6 +805,37 @@
             </div>
           </div>
         </div>
+
+        <div class="panolens-container"></div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/105/three.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/panolens@0.11.0/build/panolens.min.js"></script>
+
+        <script>
+          var panorama, viewer, container, infospot, infospot2;
+
+          container = document.querySelector(".panolens-container");
+
+          panorama = new PANOLENS.ImagePanorama(
+            "/public/Attraction/images/virtual-london.jpg"
+          );
+
+          infospot = new PANOLENS.Infospot();
+          infospot.position.set(1000, 100, -2000);
+          infospot.addHoverText("Text");
+
+          infospot2 = new PANOLENS.Infospot();
+          infospot2.position.set(1000, 100, 2000);
+          infospot2.addHoverText("Text2");
+
+          panorama.add(infospot, infospot2);
+
+          viewer = new PANOLENS.Viewer({
+            container: container,
+          });
+          viewer.add(panorama);
+        </script>
+
         <div class="gw cw1600 cf below-hero">
           <div>
             <div class="breadcrumb">
