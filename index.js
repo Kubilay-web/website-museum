@@ -1,0 +1,32 @@
+const express = require("express");
+const path = require("path");
+
+const app = express();
+const port = 3001;
+
+// Statik dosyalar için '/public' yolu kullanarak 'public' klasörünü ayarla
+app.use("/public", express.static(path.join(__dirname, "public")));
+
+// Rotalar
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Index", "index.html"));
+});
+
+app.get("/things-to-do/sightseeing/london-attraction", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Attraction", "index.html"));
+});
+
+app.get(
+  "/things-to-do/event/6987276-lion-king-the-musical-at-the-lyceum-theatre",
+  (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "Lion-king", "index.html"));
+  }
+);
+
+app.get("/things-to-do/family-activities", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "London-for-kids", "index.html"));
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
