@@ -204,6 +204,10 @@ app.get("/where-to-stay", (req, res) => {
   );
 });
 
+app.get("/virtual", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Virtual", "index.html"));
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
