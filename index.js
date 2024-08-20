@@ -255,6 +255,30 @@ app.get(
   }
 );
 
+app.get(
+  "/things-to-do/sightseeing/which-london-sightseeing-pass",
+  (req, res) => {
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Save-Ideas-1", "index.html")
+    );
+  }
+);
+
+app.get("/things-to-do/budget-london", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Save-Ideas-2", "index.html")
+  );
+});
+
+app.get(
+  "/traveller-information/place/48383714-go-city-london-explorer-pass",
+  (req, res) => {
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Save-Ideas-3", "index.html")
+    );
+  }
+);
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
