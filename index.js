@@ -210,6 +210,51 @@ app.get("/virtual", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "Virtual", "index.html"));
 });
 
+app.get("/things-to-do/place/427311-buckingham-palace", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Must-Sees-1", "index.html")
+  );
+});
+
+app.get("/things-to-do/event/32392658-hop-on-hop-off-bus-tour", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Must-Sees-2", "index.html")
+  );
+});
+
+app.get(
+  "/things-to-do/place/23035130-warner-bros-studio-tour-london-the-making-of-harry-potter",
+  (req, res) => {
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Must-Sees-3", "index.html")
+    );
+  }
+);
+
+app.get("/things-to-do/whats-on/theatre/top-ten-musicals", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Explorer-1", "index.html")
+  );
+});
+
+app.get(
+  "/things-to-do/sightseeing/sightseeing-tours/top-london-tours",
+  (req, res) => {
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Explorer-2", "index.html")
+    );
+  }
+);
+
+app.get(
+  "/things-to-do/sightseeing/london-attraction/top-ten-attractions",
+  (req, res) => {
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Explorer-3", "index.html")
+    );
+  }
+);
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
