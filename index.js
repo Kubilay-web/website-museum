@@ -279,6 +279,12 @@ app.get(
   }
 );
 
+app.get("/Whats-Coming-1", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Whats-Coming-1", "index.html")
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
