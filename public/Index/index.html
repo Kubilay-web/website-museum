@@ -55,6 +55,27 @@
     name="msapplication-TileImage" />
   <meta content="https://cdn.londonandpartners.com/webui/visit/favicons/browserconfig.xml"
     name="msapplication-config" />
+
+  <style>
+    @media (min-width: 755px) {
+      .header .mobile-header {
+        height: 150px;
+        padding-top: 18px;
+      }
+
+      a.brand {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  </style>
+
+
+
+
+
+
 </head>
 
 <body class="sticky-nav-init">
@@ -256,8 +277,8 @@
         <span class="mobile-menu-label"> Menu </span>
       </button>
       <a class="brand" href="/">
-        <img src="/public/Index/images/logo.png" style="width:279px;height:103px" />
-        <span class="c tagline"> Online Visitor Guide </span>
+        <img src="/public/Index/images/logo.png" style="width:23vw;height:auto" />
+        <!-- <span class="c tagline"> Online Visitor Guide </span> -->
       </a>
       <div class="noprint" id="lang-picker">
         <button aria-expanded="false" aria-haspopup="true" aria-label="Language: English" class=""
@@ -648,12 +669,13 @@
   <main class="main" role="main">
     <div id="content">
       <div class="hero-section-homepage cf">
-        <img alt="The Dersim skyline and river Thames at sunset with Tower Bridge and the Shard in view" height="auto"
-          sizes="100vw" src="/public/Index/images/banner.jpg" srcset="
-              /public/Index/images/banner.jpg  666w,
-              public/Index/images/banner.jpg  1385w,
-              /public/Index/images/banner.jpg 1920w
-            " width="1920" />
+
+        <video alt="The Dersim skyline and river Thames at sunset with Tower Bridge and the Shard in view" height="auto"
+          sizes="100vw" style="width:100vw;height:auto;z-index:-99;" autoplay muted loop playsinline>
+          <source src="/public/Index/images/video.mp4" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
+        </video>
+
         <div class="overlay">
           <div class="gw">
             <div class="heading">
