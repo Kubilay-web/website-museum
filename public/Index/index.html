@@ -59,8 +59,7 @@
   <style>
     @media (min-width: 755px) {
       .header .mobile-header {
-        height: 150px;
-        padding-top: 18px;
+        height: 120px;
       }
 
       a.brand {
@@ -68,6 +67,40 @@
         align-items: center;
         flex-direction: column;
       }
+    }
+
+
+    .video-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .background-video {
+
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      z-index: -1;
+    }
+
+    .overlay-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      text-align: center;
+      color: white;
+    }
+
+    .heading h1 {
+      font-size: 3em;
+      margin: 0;
     }
   </style>
 
@@ -541,7 +574,7 @@
             </li>
             <li class="-tab main-navigation-tab">
               <a class="main-navigation-link" href="/things-to-do">
-                <span> YAPILACAKLAR </span>
+                <span> AKTİVİTELER </span>
                 <i class="svg icon icon-vl-dropdown"> </i>
               </a>
               <div class="megamenu sub cols4">
@@ -558,42 +591,42 @@
                   <ul>
                     <li>
                       <a class="" href="/things-to-do/family-activities">
-                        Dersim for kids
+                        Kış ve Doğa Sporlar
                       </a>
                     </li>
                     <li>
                       <a class="" href="/things-to-do/food-and-drink">
-                        Eat and drink
+                        Dersim Kaplıcalar
                       </a>
                     </li>
                     <li>
                       <a class="" href="/things-to-do/whats-on">
-                        Discover what's on
+                        Dersim Mutfağı
                       </a>
                     </li>
                     <li>
                       <a class="" href="/things-to-do/experiences">
-                        Have fun with friends
+                        Geleneksel El Sanatları
                       </a>
                     </li>
                     <li>
                       <a class="" href="/things-to-do/nightlife">
-                        Nightlife
+                        Dersim'in Saz ve Bağlama Kültürü
                       </a>
                     </li>
                     <li>
                       <a class="" href="/things-to-do/shopping">
-                        Go shopping
+                        Dersim Müzesi
                       </a>
                     </li>
                     <li>
                       <a class="" href="/things-to-do/sightseeing/london-attraction/zoo">
-                        Zoos and wildlife parks
+                        Munzur Milli Parkı
                       </a>
                     </li>
                     <li>
                       <a class="highlight" href="/things-to-do">
-                        All things to do
+                        Hepsini Görüntüleyin
                       </a>
                     </li>
                   </ul>
@@ -670,7 +703,7 @@
     <div id="content">
       <div class="hero-section-homepage cf">
 
-        <video alt="The Dersim skyline and river Thames at sunset with Tower Bridge and the Shard in view" height="auto"
+        <!-- <video alt="The Dersim skyline and river Thames at sunset with Tower Bridge and the Shard in view" height="auto"
           sizes="100vw" style="width:100vw;height:auto;z-index:-99;" autoplay muted loop playsinline>
           <source src="/public/Index/images/video.mp4" type="video/mp4">
           Tarayıcınız video etiketini desteklemiyor.
@@ -683,7 +716,26 @@
             </div>
             <div class="insert"></div>
           </div>
+        </div> -->
+
+
+        <div class="video-wrapper">
+          <video class="background-video" autoplay muted loop playsinline>
+            <source src="/public/Index/images/video.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+          </video>
+
+          <div class="overlay-header">
+            <div class="gw">
+              <div class="heading">
+                <h1>Discover Dersim</h1>
+              </div>
+              <div class="insert"></div>
+            </div>
+          </div>
         </div>
+
+
         <div>
           <div class="below-hero-usps">
             <div class="gw cw1600">
