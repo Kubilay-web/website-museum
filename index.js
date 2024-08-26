@@ -285,6 +285,48 @@ app.get("/Whats-Coming-1", (req, res) => {
   );
 });
 
+app.get("/dersim/travel-cemisgezek", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Dersim-Cemişgezek", "index.html")
+  );
+});
+
+app.get("/dersim/travel-hozat", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Dersim-Hozat", "index.html")
+  );
+});
+
+app.get("/dersim/travel-mazgirt", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Dersim-Mazgirt", "index.html")
+  );
+});
+
+app.get("/dersim/travel-nazımiye", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Dersim-Nazımiye", "index.html")
+  );
+});
+
+app.get("/dersim/travel-ovacık", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Dersim-Ovacık", "index.html")
+  );
+});
+
+app.get("/dersim/travel-pertek", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Dersim-Pertek", "index.html")
+  );
+});
+
+app.get("/dersim/travel-pülümür", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Dersim-Pülümür", "index.html")
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
