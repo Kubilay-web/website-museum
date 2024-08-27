@@ -285,45 +285,317 @@ app.get("/Whats-Coming-1", (req, res) => {
   );
 });
 
-app.get("/dersim/travel-cemisgezek", (req, res) => {
+app.get("/dersim/cemisgezek", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Cemişgezek", "index.html")
   );
 });
 
-app.get("/dersim/travel-hozat", (req, res) => {
+app.get("/dersim/hozat", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Hozat", "index.html")
   );
 });
 
-app.get("/dersim/travel-mazgirt", (req, res) => {
+app.get("/dersim/mazgirt", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Mazgirt", "index.html")
   );
 });
 
-app.get("/dersim/travel-nazımiye", (req, res) => {
+app.get("/dersim/nazımiye", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Nazımiye", "index.html")
   );
 });
 
-app.get("/dersim/travel-ovacık", (req, res) => {
+app.get("/dersim/ovacık", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Ovacık", "index.html")
   );
 });
 
-app.get("/dersim/travel-pertek", (req, res) => {
+app.get("/dersim/pertek", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Pertek", "index.html")
   );
 });
 
-app.get("/dersim/travel-pülümür", (req, res) => {
+app.get("/dersim/pulumur", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Pülümür", "index.html")
+  );
+});
+
+app.get("/tarihimiz/anit-cinar-agaci", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Anıt-Cınar-Agacı",
+      "index.html"
+    )
+  );
+});
+
+app.get("/tarihimiz/bagin-kalesi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Bagın-Kalesi",
+      "index.html"
+    )
+  );
+});
+
+app.get("/tarihimiz/dervis-hucreleri", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Dervis-Hücreleri",
+      "index.html"
+    )
+  );
+});
+
+app.get("/tarihimiz/ergen-kilisesi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Ergen-Kilisesi",
+      "index.html"
+    )
+  );
+});
+
+app.get("/tarihimiz/koc-mezar", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Tarihimiz-Koc-Mezar", "index.html")
+  );
+});
+
+app.get("/tarihimiz/mazgirt-kalesi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Mazgirt-Kalesi",
+      "index.html"
+    )
+  );
+});
+
+app.get("/tarihimiz/pertek-kalesi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Pertek-Kalesi",
+      "index.html"
+    )
+  );
+});
+
+app.get("/tarihimiz/sungur-bey-camii", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Sungur-Bey-Camii",
+      "index.html"
+    )
+  );
+});
+
+app.get("/tarihimiz/tarihimiz-tahar-koprusu", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Tarihimiz-Tahar-Koprusu",
+      "index.html"
+    )
+  );
+});
+
+app.get("/inanc-merkezleri/ana-fatma-ziyareti", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanc-Merkezleri-Ana-Fatma-Ziyareti",
+      "index.html"
+    )
+  );
+});
+
+app.get("/inanc-merkezleri/dervis-cemal", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanc-Merkezleri-Derviş-Cemal",
+      "index.html"
+    )
+  );
+});
+
+app.get("/inanc-merkezleri/dervis-gulabi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanc-Merkezleri-Derviş-Gülabi",
+      "index.html"
+    )
+  );
+});
+
+app.get("/inanc-merkezleri/duzgun-baba", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanc-Merkezleri-Düzgün-Baba",
+      "index.html"
+    )
+  );
+});
+
+app.get("/inanc-merkezleri/kirklar-dagi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanc-Merkezleri-Kırklar-Dağı",
+      "index.html"
+    )
+  );
+});
+
+app.get("/inanc-merkezleri/munzur-baba", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanc-Merkezleri-Munzur-Baba",
+      "index.html"
+    )
+  );
+});
+
+app.get("/inanc-merkezleri/pir-sultan-abdal", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanc-Merkezleri-Pir-Sultan-Abdal",
+      "index.html"
+    )
+  );
+});
+
+// ----------------------------------
+
+app.get("/aktiviteler/dersim-kaplicalari", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Aktiviteler-Dersim-Kaplıcalar",
+      "index.html"
+    )
+  );
+});
+
+app.get("/aktiviteler/dersim-muzesi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Aktiviteler-Dersim-Müzesi",
+      "index.html"
+    )
+  );
+});
+
+app.get("/aktiviteler/geleneksel-el-sanatlari", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Aktiviteler-Geleneksel-El-Sanatları",
+      "index.html"
+    )
+  );
+});
+
+app.get("/aktiviteler/doga-sporlari", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Aktiviteler-Kış-Doğa-Sporları",
+      "index.html"
+    )
+  );
+});
+
+app.get("/aktiviteler/dersim-mutfagi", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Aktiviteler-Dersim-Mutfağı",
+      "index.html"
+    )
+  );
+});
+
+app.get("/aktiviteler/munzur-milli-parki", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Aktiviteler-Munzur-Milli-Parkı",
+      "index.html"
+    )
+  );
+});
+
+app.get("/aktiviteler/saz-kulturu", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Aktiviteler-Saz-Kültürü",
+      "index.html"
+    )
   );
 });
 
