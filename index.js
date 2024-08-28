@@ -555,7 +555,7 @@ app.get("/etli-hatun-camii", (req, res) => {
   );
 });
 
-app.get("/ulukale-camii", (req, res) => {
+app.get("/inanc-merkezleri/ulukale-camii", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Ulukale-Camii", "index.html")
   );
