@@ -303,13 +303,13 @@ app.get("/dersim/mazgirt", (req, res) => {
   );
 });
 
-app.get("/dersim/nazımiye", (req, res) => {
+app.get("/dersim/nazimiye", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Nazımiye", "index.html")
   );
 });
 
-app.get("/dersim/ovacık", (req, res) => {
+app.get("/dersim/ovacik", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Dersim-Ovacık", "index.html")
   );
