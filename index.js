@@ -871,6 +871,12 @@ app.get("/celebi-baba-ziyareti", (req, res) => {
   );
 });
 
+app.get("/inanc-merkezleri/kureys-baba", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Kureyş-Baba", "index.html")
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
