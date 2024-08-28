@@ -829,9 +829,9 @@ app.get("/kal-ferat-turbesi", (req, res) => {
   );
 });
 
-app.get("/sultan-hizir-ocagi", (req, res) => {
+app.get("/inanc-merkezleri/sultan-hidir", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index", "Sultan-Hızır-Ocağı", "index.html")
+    path.join(__dirname, "public", "Index", "Sultan-Hıdır", "index.html")
   );
 });
 
@@ -874,6 +874,12 @@ app.get("/celebi-baba-ziyareti", (req, res) => {
 app.get("/inanc-merkezleri/kureys-baba", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Kureyş-Baba", "index.html")
+  );
+});
+
+app.get("/inanc-merkezleri/tunceli-cem-evi", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Tunceli-Cem-Evi", "index.html")
   );
 });
 
