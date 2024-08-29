@@ -883,6 +883,12 @@ app.get("/inanc-merkezleri/tunceli-cem-evi", (req, res) => {
   );
 });
 
+app.get("/tarihimiz/ulukale", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Ulukale", "index.html")
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
