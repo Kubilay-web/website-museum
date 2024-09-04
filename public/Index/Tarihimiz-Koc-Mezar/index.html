@@ -127,6 +127,54 @@
       }
     </script>
 
+  <style>
+    @media (min-width: 755px) {
+      .header .mobile-header {
+        height: 128px;
+      }
+
+      a.brand {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+
+
+    .video-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .background-video {
+
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      z-index: -1;
+    }
+
+    .overlay-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      text-align: center;
+      color: white;
+    }
+
+    .heading h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+  </style>
+
 </head>
 
 <body class="sticky-nav-init">
@@ -298,210 +346,285 @@
   <meta name="VirtualFolder" content="/" />
   <script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
 
+
+
+
+
   <header class="header" role="banner">
     <ul class="skip-links">
-      <li><a href="#content">Skip to content</a></li>
-      <li><a href="#menu">Skip to navigation</a></li>
+      <li>
+        <a href="#content"> Skip to content </a>
+      </li>
+      <li>
+        <a href="#menu"> Skip to navigation </a>
+      </li>
     </ul>
     <div class="ww cf mobile-header" id="header">
-      <button id="expand-nav" class="mobonly noprint header-mobile-trigger nav-trigger">
-        <b class="mobile-menu-icon"></b>
-        <span class="mobile-menu-label">Menu</span>
+      <button class="mobonly noprint header-mobile-trigger nav-trigger" id="expand-nav">
+        <b class="mobile-menu-icon"> </b>
+        <span class="mobile-menu-label"> Menu </span>
       </button>
-
       <a class="brand" href="/">
-        <span class="svg visitlondon-logo icon-visitlondon-logo-red">visitlondon.com</span>
-        <span class="c tagline">Official Visitor Guide</span>
+        <img src="/public/Index/images/logo.png" style="width:23vw;height:auto" />
+        <!-- <span class="c tagline"> Online Visitor Guide </span> -->
       </a>
-
-      <div id="lang-picker" class="noprint">
-        <button id="lang-trigger2" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-          aria-label="Language: English">
+      <div class="noprint" id="lang-picker">
+        <button aria-expanded="false" aria-haspopup="true" aria-label="Language: English" class=""
+          data-toggle="dropdown" id="lang-trigger2">
           EN
-          <span class="icon svg icon-vl-dropdown"></span>
+          <span class="icon svg icon-vl-dropdown"> </span>
         </button>
-        <div id="lang-picker-instructions" class="hidden">
+        <div class="hidden" id="lang-picker-instructions">
           Select a language:
         </div>
         <ul class="lang-picker-menu">
           <li>
-            <a href="https://www.visitlondon.com/things-to-do/place/427311-buckingham-palace" hreflang="en" lang="en"
-              class="selected">
+            <a class="selected" href="https://www.visitlondon.com" hreflang="en" lang="en">
               English
             </a>
           </li>
           <li>
-            <a href="https://www.visitlondon.com/de/sehen-und-erleben/ort/427311-buckingham-palace" hreflang="de"
-              lang="de" class="">
+            <a class="" href="https://www.visitlondon.com/de" hreflang="de" lang="de">
               German
             </a>
           </li>
           <li>
-            <a href="https://www.visitlondon.com/fr/que-faire-a-londres/endroit/427311-buckingham-palace" hreflang="fr"
-              lang="fr" class="">
-              French
+            <a class="" href="/" hreflang="fr" lang="fr">
+              Turkish
             </a>
           </li>
           <li>
-            <a href="https://www.visitlondon.com/it/cosa-fare/luogo/427311-buckingham-palace" hreflang="it" lang="it"
-              class="">
-              Italian
+            <a class="" href="https://www.visitlondon.com/it" hreflang="it" lang="it">
+              Kurdish
             </a>
           </li>
           <li>
-            <a href="https://www.visitlondon.com/es/cosas-que-hacer/lugar/427311-buckingham-palace" hreflang="es"
-              lang="es" class="">
-              Spanish
-            </a>
-          </li>
-          <li>
-            <a href="http://london.cn/visit" rel="external" hreflang="zh" lang="zh" class="">
-              Chinese
+            <a class="" href="https://www.visitlondon.com/es" hreflang="es" lang="es">
+              -
             </a>
           </li>
         </ul>
       </div>
-
-      <button id="expand-search" class="mobonly noprint header-mobile-trigger search-trigger">
-        <b class="svg icon-search-red-outline">Search</b>
+      <button class="mobonly noprint header-mobile-trigger search-trigger" id="expand-search">
+        <b class="svg icon-search-red-outline"> Search </b>
       </button>
-      <form class="header-search cf" action="/search" role="search">
-        <label for="search-keywords" class="nonvis" id="search-label">Search</label>
-        <input type="search" id="search-keywords" name="keywords" class="header-search-field"
-          aria-labelledby="search-label" placeholder="Search" />
-        <button title="Search" class="header-search-submit" type="submit">
-          <i class="svg icon-search-red-outline">Search</i>
+      <!-- <form action="/search" class="header-search cf" role="search">
+        <label class="nonvis" for="search-keywords" id="search-label">
+          Search
+        </label>
+        <input aria-labelledby="search-label" class="header-search-field" id="search-keywords" name="keywords"
+          placeholder="Search" type="search" />
+        <button class="header-search-submit" title="Search" type="submit">
+          <i class="svg icon-search-red-outline"> Search </i>
         </button>
-      </form>
+      </form> -->
     </div>
-
     <div class="nav-menu-container">
-      <nav id="menu" class="main-nav-new">
+      <nav class="main-nav-new" id="menu">
         <div class="mobile-nav-top">
           <button id="close-mobile-menu">Close</button>
         </div>
-
         <div class="ww cf megamenu-nav">
           <ul class="main-navigation-links">
             <li class="home-tab main-navigation-tab">
-              <a href="/" class="tl-nav main-navigation-link">
-                <i class="svg icon-home-22"><span>Home</span></i>
-              </a>
-            </li>
-
-            <li class="-tab main-navigation-tab">
-              <a href="https://www.visitlondon.com/tickets-and-offers" class="main-navigation-link">
-                <span>Book tickets</span>
+              <a class="tl-nav main-navigation-link" href="/">
+                <i class="svg icon-home-22">
+                  <span> HOME </span>
+                </i>
               </a>
             </li>
             <li class="-tab main-navigation-tab">
-              <a href="/things-to-do/sightseeing" class="main-navigation-link">
-                <span>Sightseeing</span>
-                <i class="svg icon icon-vl-dropdown"></i>
+              <a class="main-navigation-link" href="https://www.visitlondon.com/tickets-and-offers">
+                <span> DERSİM </span>
+                <i class="svg icon icon-vl-dropdown"> </i>
+                <!-- DERSİM ALTINA DROPDOWN'A BAK. -->
               </a>
               <div class="megamenu sub cols4">
                 <div class="ww cf">
                   <div class="column megamenu-sidebar sidebar first">
                     <div class="megamenu-intro">
-                      <div class="megamenu-intro-title">Sightseeing</div>
+                      <div class="megamenu-intro-title">
+                        Dersim
+                      </div>
                       <div class="megamenu-intro-text">
-                        See Dersim’s top sights, from world-famous attractions
-                        to iconic landmarks.
+                        Dersim ili ve İlçeleri ile ilgili bilgilere buradan ulaşabilirsiniz.
                       </div>
                     </div>
                   </div>
                   <ul>
                     <li>
-                      <a class="" href="/things-to-do/sightseeing/london-attraction">Visit top attractions</a>
+                      <a class="" href="/dersim/cemisgezek">
+                        ÇEMİŞGEZEK
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/sightseeing/royal-london">Royal Dersim</a>
+                      <a class="" href="/dersim/hozat">
+                        HOZAT
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/sightseeing/sightseeing-tours/day-trips-from-london">Find days out
-                        of town</a>
+                      <a class="" href="/dersim/mazgirt">
+                        MAZGİRT
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="https://www.visitlondon.com/things-to-do/place/593062-london-pass">Dersim
-                        attraction pass</a>
+                      <a class="" href="/dersim/nazimiye">
+                        NAZIMİYE
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/sightseeing/sightseeing-tours">Join a tour</a>
+                      <a class="" href="/dersim/ovacik">
+                        OVACIK
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/sightseeing/one-day-itineraries">Follow our itineraries</a>
+                      <a href="/dersim/pertek">
+                        PERTEK
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/openspace">Parks and outdoors</a>
-                    </li>
-                    <li>
-                      <a class="highlight" href="/things-to-do/sightseeing">All sightseeing</a>
+                      <a href="/dersim/pulumur">
+                        PÜLÜMÜR
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </li>
             <li class="-tab main-navigation-tab">
-              <a href="/things-to-do/whats-on/theatre" class="main-navigation-link">
-                <span>Theatre</span>
-                <i class="svg icon icon-vl-dropdown"></i>
+              <a class="main-navigation-link" href="/things-to-do/sightseeing">
+                <span> TARİHİMİZ </span>
+                <i class="svg icon icon-vl-dropdown"> </i>
               </a>
               <div class="megamenu sub cols4">
                 <div class="ww cf">
                   <div class="column megamenu-sidebar sidebar first">
                     <div class="megamenu-intro">
-                      <div class="megamenu-intro-title">Theatre</div>
+                      <div class="megamenu-intro-title">TARİHİMİZ</div>
                       <div class="megamenu-intro-text">
-                        Experience West End shows, must-see musicals and
-                        innovative plays.
+                        Dersim'in tarihi mekanlarını birlikte keşfedelim.
                       </div>
                     </div>
                   </div>
                   <ul>
                     <li>
-                      <a class=""
-                        href="https://www.visitlondon.com/things-to-do/event/6987276-lion-king-the-musical-at-the-lyceum-theatre">Lion
-                        King Dersim tickets</a>
+                      <a class="" href="/tarihimiz/pertek-kalesi">
+                        Pertek Kalesi
+                      </a>
                     </li>
                     <li>
-                      <a class=""
-                        href="https://www.visitlondon.com/things-to-do/event/6573327-wicked-the-musical-at-the-apollo-victoria">Wicked
-                        Dersim tickets</a>
+                      <a class="" href="/tarihimiz/koc-mezar">
+                        Koç biçimli mezar taşları
+                      </a>
                     </li>
                     <li>
-                      <a class=""
-                        href="https://www.visitlondon.com/things-to-do/event/430290-mamma-mia-the-musical-at-the-novello-theatre">Mamma
-                        Mia!</a>
+                      <a class="" href="/tarihimiz/ergen-kilisesi">
+                        Ergen Kilisesi
+                      </a>
                     </li>
                     <li>
-                      <a class=""
-                        href="https://www.visitlondon.com/things-to-do/event/430257-phantom-of-the-opera-at-his-majestys-theatre-london">Phantom
-                        of the Opera Dersim tickets</a>
+                      <a class="" href="/tarihimiz/dervis-hucreleri">
+                        Derviş Hücreleri
+                      </a>
                     </li>
                     <li>
-                      <a class=""
-                        href="https://www.visitlondon.com/things-to-do/event/27016170-book-of-mormon-the-musical-at-the-prince-of-wales-theatre">Book
-                        of Mormon Dersim tickets</a>
+                      <a class="" href="/tarihimiz/tarihimiz-tahar-koprusu">
+                        Tahar Köprüsü
+                      </a>
                     </li>
                     <li>
-                      <a class=""
-                        href="https://www.visitlondon.com/things-to-do/event/17888493-matilda-the-musical-at-the-cambridge-theatre">Matilda
-                        The Musical</a>
+                      <a class="" href="/tarihimiz/ulukale">
+                        Ulukale
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/whats-on/theatre/musical">Musicals in Dersim</a>
+                      <a class="" href="/tarihimiz/anit-cinar-agaci">
+                        Anıt Çınar Ağacı
+                      </a>
                     </li>
                     <li>
-                      <a class="highlight" href="/things-to-do/whats-on/theatre">All theatre</a>
+                      <a href="/tarihimiz/bagin-kalesi">
+                        Bağın Kalesi
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/tarihimiz/mazgirt-kalesi">
+                        Mazgirt Kalesi
+                      </a>
+                    </li>
+                    <li>
+                      <a class="highlight" href="/things-to-do/sightseeing">
+                        Hepsini Görüntüleyin
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </li>
             <li class="-tab main-navigation-tab">
-              <a href="/things-to-do" class="main-navigation-link">
-                <span>Things to do</span>
-                <i class="svg icon icon-vl-dropdown"></i>
+              <a class="main-navigation-link" href="/things-to-do/whats-on/theatre">
+                <span> İNANÇ MERKEZLERİ </span>
+                <i class="svg icon icon-vl-dropdown"> </i>
+              </a>
+              <div class="megamenu sub cols4">
+                <div class="ww cf">
+                  <div class="column megamenu-sidebar sidebar first">
+                    <div class="megamenu-intro">
+                      <div class="megamenu-intro-title">İNANÇ MERKEZLERİ</div>
+                      <div class="megamenu-intro-text">
+                        Dersim'deki Cem evlerini ve türbeleri birlikte keşfedelim.
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <a class="" href="/inanc-merkezleri/ana-fatma-ziyareti">
+                        Ana Fatma Ziyareti
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/inanc-merkezleri/kureys-baba">
+                        Kureyş Baba
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/inanc-merkezleri/munzur-baba">
+                        Munzur Baba Türbesi
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/sari-saltuk-ocagi">
+                        Sarı Saltuk
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/inanc-merkezleri/sultan-hidir">
+                        Sultan Hıdır
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/inanc-merkezleri/tunceli-cem-evi">
+                        Tunceli Cem Evi
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="/inanc-merkezleri/ulukale-camii">
+                        Ulukale Camii
+                      </a>
+                    </li>
+                    <li>
+                      <a class="highlight" href="/things-to-do/whats-on/theatre">
+                        Hepsini Görüntüleyin
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="-tab main-navigation-tab">
+              <a class="main-navigation-link" href="/things-to-do">
+                <span> AKTİVİTELER </span>
+                <i class="svg icon icon-vl-dropdown"> </i>
               </a>
               <div class="megamenu sub cols4">
                 <div class="ww cf">
@@ -516,39 +639,55 @@
                   </div>
                   <ul>
                     <li>
-                      <a class="" href="/things-to-do/family-activities">Dersim for kids</a>
+                      <a class="" href="/aktiviteler/doga-sporlari">
+                        Kış ve Doğa Sporlar
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/food-and-drink">Eat and drink</a>
+                      <a class="" href="/aktiviteler/dersim-kaplicalari">
+                        Dersim Kaplıcalar
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/whats-on">Discover what's on</a>
+                      <a class="" href="/aktiviteler/dersim-mutfagi">
+                        Dersim Mutfağı
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/experiences">Have fun with friends</a>
+                      <a class="" href="/aktiviteler/geleneksel-el-sanatlari">
+                        Geleneksel El Sanatları
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/nightlife">Nightlife</a>
+                      <a class="" href="/aktiviteler/saz-kulturu">
+                        Dersim'in Saz ve Bağlama Kültürü
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/shopping">Go shopping</a>
+                      <a class="" href="/aktiviteler/dersim-muzesi">
+                        Dersim Müzesi
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/things-to-do/sightseeing/london-attraction/zoo">Zoos and wildlife parks</a>
+                      <a class="" href="/aktiviteler/munzur-milli-parki">
+                        Munzur Milli Parkı
+                      </a>
                     </li>
                     <li>
-                      <a class="highlight" href="/things-to-do">All things to do</a>
+                      <a class="highlight" href="/things-to-do">
+                        Hepsini Görüntüleyin
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </li>
             <li class="-tab main-navigation-tab">
-              <a href="/traveller-information" class="main-navigation-link">
-                <span>Traveller information </span>
-                <i class="svg icon icon-vl-dropdown"></i>
+              <a class="main-navigation-link" href="/traveller-information">
+                <span>ŞEHİR İÇİ ULAŞIM</span>
+                <i class="svg icon icon-vl-dropdown"> </i>
               </a>
-              <div class="megamenu sub cols4">
+              <!-- <div class="megamenu sub cols4">
                 <div class="ww cf">
                   <div class="column megamenu-sidebar sidebar first">
                     <div class="megamenu-intro">
@@ -563,42 +702,56 @@
                   </div>
                   <ul>
                     <li>
-                      <a class="" href="/traveller-information/travel-to-london">Travel to Dersim</a>
+                      <a class="" href="/traveller-information/travel-to-london">
+                        Travel to Dersim
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/traveller-information/getting-around-london">Get around the city</a>
+                      <a class="" href="/traveller-information/getting-around-london">
+                        Get around the city
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/traveller-information/essential-information/accessible-london">Accessibility in
-                        Dersim</a>
+                      <a class="" href="/traveller-information/essential-information/accessible-london">
+                        Accessibility in Dersim
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/where-to-stay/hotel">Book a hotel</a>
+                      <a class="" href="/where-to-stay/hotel">
+                        Book a hotel
+                      </a>
                     </li>
                     <li>
-                      <a class="" href="/traveller-information/essential-information">Know the essentials</a>
+                      <a class="" href="/traveller-information/essential-information">
+                        Know the essentials
+                      </a>
                     </li>
                     <li>
-                      <a class="highlight" href="/traveller-information">All traveller information</a>
+                      <a class="highlight" href="/traveller-information">
+                        All traveller information
+                      </a>
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
             </li>
             <li class="-tab main-navigation-tab">
-              <a href="/where-to-stay" class="main-navigation-link">
-                <span>Dersim accommodation</span>
+              <a class="main-navigation-link" href="/where-to-stay">
+                <span> DERSİM STIFTUNG </span>
               </a>
             </li>
           </ul>
         </div>
-
         <div class="nav-extra">
           <ul></ul>
         </div>
       </nav>
     </div>
   </header>
+
+
+
+
   <main role="main" class="main">
     <div id="content">
       <div class="gw content cw1280 content gw cf">
