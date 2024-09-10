@@ -163,20 +163,20 @@ app.get("/things-to-do", (req, res) => {
   );
 });
 
-app.get("/traveller-information/travel-to-london", (req, res) => {
+app.get("/sehirici-ulasim/travel-to-london", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Travel-To-London", "index.html")
   );
 });
 
-app.get("/traveller-information/getting-around-london", (req, res) => {
+app.get("/sehirici-ulasim/getting-around-london", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Get-Around-The-City", "index.html")
   );
 });
 
 app.get(
-  "/traveller-information/essential-information/accessible-london",
+  "/sehirici-ulasim/essential-information/accessible-london",
   (req, res) => {
     res.sendFile(
       path.join(__dirname, "public", "Accessible-London", "index.html")
@@ -188,16 +188,14 @@ app.get("/where-to-stay/hotel", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "Book-a-Hotel", "index.html"));
 });
 
-app.get("/traveller-information/essential-information", (req, res) => {
+app.get("/sehirici-ulasim/essential-information", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Know-The-Essentials", "index.html")
   );
 });
 
-app.get("/traveller-information", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "public", "Traveller-Information", "index.html")
-  );
+app.get("/sehirici-ulasim", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Index", "Ulasım", "index.html"));
 });
 
 app.get("/where-to-stay", (req, res) => {
@@ -271,7 +269,7 @@ app.get("/things-to-do/budget-london", (req, res) => {
 });
 
 app.get(
-  "/traveller-information/place/48383714-go-city-london-explorer-pass",
+  "/sehirici-ulasim/place/48383714-go-city-london-explorer-pass",
   (req, res) => {
     res.sendFile(
       path.join(__dirname, "public", "Index", "Save-Ideas-3", "index.html")
@@ -887,10 +885,6 @@ app.get("/tarihimiz/ulukale", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "Ulukale", "index.html")
   );
-});
-
-app.get("/sehirici-ulasim", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Index", "sehirici-ulasim.html"));
 });
 
 app.listen(port, () => {
