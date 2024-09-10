@@ -147,7 +147,71 @@
     }
   </style>
 
+  <style>
+    footer.vl-footer .footer-topline .footer-content .footer-mobile-graphic {
+      background-image: none !important;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-bottom: 2px solid #282828;
+      height: 100px;
+      margin-inline: -10px;
+      margin-bottom: 50px;
+      width: calc(100% + 20px);
+      z-index: -1;
+    }
+  </style>
 
+  <style>
+    @media (max-width: 500px) {
+      .about-info {
+        flex: auto;
+        margin: auto !important;
+        padding: 0px 0px 0px 0px !important;
+      }
+    }
+
+    .about-info {
+      flex: auto;
+      margin: auto !important;
+      padding: 0px 50px 0px 50px;
+    }
+  </style>
+
+  <style>
+    .icon-visitlondon-logo-red {
+      background-image: url(/public/Index/images/logo-3-3.png) !important;
+      background-repeat: no-repeat !important;
+      background-size: 600px auto !important;
+    }
+
+    span.svg.visitlondon-logo.icon-visitlondon-logo-red {
+      height: 120px !important;
+    }
+
+    footer.vl-footer .footer-topline .footer-content .footer-topline-items .footer-logo {
+      float: none;
+      height: 60px !important;
+      margin: 0;
+      width: 347px;
+    }
+
+    footer.vl-footer .footer-topline .footer-content .footer-topline-items .footer-logo {
+      float: none;
+      height: auto;
+      margin: 0;
+      width: 347px;
+    }
+  </style>
+
+
+  <style>
+    @media (min-width: 755px) {
+      .main-nav-new .megamenu .ww ul li:last-child a {
+        color: #000;
+      }
+    }
+  </style>
 
 </head>
 
@@ -2311,7 +2375,7 @@
 
 
 
-  <footer class="footer footer-new">
+  <!-- <footer class="footer footer-new">
     <div class="footer-wrap ww" role="contentinfo">
       <div class="footer-logos">
         <a class="footer-logo svg icon-landp-grey" href="https://www.londonandpartners.com">
@@ -2408,7 +2472,102 @@
 
     </div>
 
+  </footer> -->
+
+
+  <footer class="vl-footer">
+    <div class="footer-topline">
+      <div class="footer-content">
+        <div class="footer-mobile-graphic"></div>
+        <div class="footer-topline-items">
+          <div class="footer-logo">
+            <span class="svg visitlondon-logo icon-visitlondon-logo-red"></span>
+          </div>
+          <div>
+            <img src="/public/Index/images/dersim_stiftung.png" style="width:154px;height:77px;" />
+          </div>
+
+          <div class="footer-social">
+            <ul>
+              <li>
+                <a data-ga-link="Social Network" rel="external me" href="https://tiktok.com/" class="icon tiktok"
+                  title="TikTok">TikTok</a>
+              </li>
+              <li>
+                <a data-ga-link="Social Network" rel="external me" href="https://www.youtube.com/" class="icon youtube"
+                  title="YouTube">YouTube</a>
+              </li>
+              <li>
+                <a data-ga-link="Social Network" rel="external me" href="https://instagram.com/" class="icon instagram"
+                  title="Instagram">Instagram</a>
+              </li>
+              <li>
+                <a data-ga-link="Social Network" rel="external me" href="https://tr.linkedin.com/" class="icon linkedin"
+                  title="LinkedIn">LinkedIn</a>
+              </li>
+              <li>
+                <a data-ga-link="Social Network" rel="external me" href="https://x.com/" class="icon twitter"
+                  title="Twitter">Twitter</a>
+              </li>
+              <li>
+                <a data-ga-link="Social Network" rel="external me" href="https://www.facebook.com/"
+                  class="icon facebook" title="Facebook">Facebook</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-about">
+      <div class="footer-content">
+        <!-- <div class="about-logos">
+          <a href="https://www.londonandpartners.com" class="footer-logo svg icon-landp-white">Dersim &amp; Partners</a>
+          <a href="https://www.london.gov.uk/" class="footer-logo svg icon-mayor-london-white">Supported by Mayor of
+            Dersim</a>
+        </div> -->
+        <div class="about-info">
+          <div class="footer-aboutlinks">
+            <ul>
+              <li>
+                <a href="/contact-us"> İletişim </a>
+              </li>
+              <li>
+                <a href="/about-us"> Hakkımızda </a>
+              </li>
+              <li>
+                <a href="/advertise-with-us"> Reklam </a>
+              </li>
+              <li>
+                <a href="https://www.londonandpartners.com/about-us/sustainability">
+                  Sürdürülebilirlik
+                </a>
+              </li>
+              <li>
+                <a href="/about-us/accessibility"> Ulaşılabilirlik </a>
+              </li>
+              <li>
+                <a href="/about-us/terms-and-conditions">
+                  Şartlar ve Koşullar
+                </a>
+              </li>
+              <li>
+                <a href="/about-us/privacy"> Gizlilik </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
   </footer>
+
+
+
   <script>
     (function (d, e) {
       if (!d.getElementById(e)) return false;
