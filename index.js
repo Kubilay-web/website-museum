@@ -184,7 +184,7 @@ app.get(
   }
 );
 
-app.get("/where-to-stay/hotel", (req, res) => {
+app.get("/dersim-stiftung/hotel", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "Book-a-Hotel", "index.html"));
 });
 
@@ -198,9 +198,9 @@ app.get("/sehirici-ulasim", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "Index", "Ulasım", "index.html"));
 });
 
-app.get("/where-to-stay", (req, res) => {
+app.get("/dersim-stiftung", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "London-Accomodation", "index.html")
+    path.join(__dirname, "public", "Index", "Dersim-Stiftung", "index.html")
   );
 });
 
