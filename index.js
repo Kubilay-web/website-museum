@@ -889,6 +889,10 @@ app.get("/tarihimiz/ulukale", (req, res) => {
   );
 });
 
+app.get("/sehirici-ulasim", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Index", "sehirici-ulasim.html"));
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
