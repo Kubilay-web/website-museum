@@ -4,8 +4,10 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors());
+
 const port = 3001;
 
+app.use(express.static(path.join(__dirname, "/public")));
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
