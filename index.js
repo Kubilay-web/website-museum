@@ -945,6 +945,8 @@ app.get("/tarihimiz/ulukale", (req, res) => {
   );
 });
 
+// TURKİSH END
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

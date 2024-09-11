@@ -1,0 +1,18 @@
+<svg id="Group_4742" data-name="Group 4742" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51.161" height="53.378" viewBox="0 0 51.161 53.378">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4451" data-name="Rectangle 4451" width="36.025" height="52.502" fill="none" stroke="#000" stroke-width="2"/>
+    </clipPath>
+  </defs>
+  <g id="Group_4726" data-name="Group 4726" transform="translate(10.792)">
+    <g id="Group_4725" data-name="Group 4725" clip-path="url(#clip-path)">
+      <circle id="Ellipse_274" data-name="Ellipse 274" cx="12.396" cy="12.396" r="12.396" transform="translate(1.973 27.17)" fill="none" stroke="#000" stroke-width="2"/>
+      <path id="Path_3395" data-name="Path 3395" d="M91.125,82.015l-1.272,4.922-2.6,10.07,18.324,3.474,3.789,17.772" transform="translate(-77.83 -73.159)" fill="none" stroke="#000" stroke-width="2"/>
+      <line id="Line_1698" data-name="Line 1698" x2="5.68" y2="7.92" transform="translate(0.869 18.855)" fill="none" stroke="#000" stroke-width="2"/>
+      <line id="Line_1699" data-name="Line 1699" y1="4.921" x2="11.815" transform="translate(0.208 13.778)" fill="none" stroke="#000" stroke-width="2"/>
+      <path id="Path_3396" data-name="Path 3396" d="M102.877,9.159a4.158,4.158,0,1,0-4.158,4.158A4.158,4.158,0,0,0,102.877,9.159Z" transform="translate(-84.35 -4.461)" fill="none" stroke="#000" stroke-width="2"/>
+      <line id="Line_1700" data-name="Line 1700" y1="0.915" x2="4.44" transform="translate(31.476 43.644)" fill="none" stroke="#000" stroke-width="2"/>
+    </g>
+  </g>
+  <line id="Line_1724" data-name="Line 1724" x2="51.161" transform="translate(0 52.378)" fill="none" stroke="#000" stroke-width="2"/>
+</svg>
