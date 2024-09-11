@@ -13,63 +13,87 @@ app.get("/", (req, res) => {
 });
 
 app.get("/things-to-do/sightseeing/london-attraction", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Attraction", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Attraction", "index.html")
+  );
 });
 
 app.get(
   "/things-to-do/event/6987276-lion-king-the-musical-at-the-lyceum-theatre",
   (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "Lion-King", "index.html"));
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Lion-King", "index.html")
+    );
   }
 );
 
 app.get("/things-to-do/family-activities", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "London-For-Kids", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "London-For-Kids", "index.html")
+  );
 });
 
 app.get("/things-to-do/sightseeing/royal-london", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Royal-London", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Royal-London", "index.html")
+  );
 });
 
 app.get("/tickets-and-offers", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Book-tickets", "index.html"));
-});
-
-app.get("/panolens", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "panolens", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Book-tickets", "index.html")
+  );
 });
 
 app.get(
   "/things-to-do/sightseeing/sightseeing-tours/day-trips-from-london",
   (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "Find-days", "index.html"));
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Find-days", "index.html")
+    );
   }
 );
 
 app.get("/things-to-do/place/593062-london-pass", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "London-attraction-pass", "index.html")
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "London-attraction-pass",
+      "index.html"
+    )
   );
 });
 
 app.get("/things-to-do/sightseeing/sightseeing-tours", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Join-a-tour", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Join-a-tour", "index.html")
+  );
 });
 
 app.get("/things-to-do/sightseeing/one-day-itineraries", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Follow-Our-itinaries", "index.html")
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Follow-Our-itinaries",
+      "index.html"
+    )
   );
 });
 
 app.get("/things-to-do/openspace", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Parks-And-Outdoors", "index.html")
+    path.join(__dirname, "public", "Index", "Parks-And-Outdoors", "index.html")
   );
 });
 
 app.get("/things-to-do/sightseeing", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "All-Sightseeing", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "All-Sightseeing", "index.html")
+  );
 });
 
 app.get("/things-to-do/sightseeing", (req, res) => {
@@ -80,7 +104,13 @@ app.get(
   "/things-to-do/event/6573327-wicked-the-musical-at-the-apollo-victoria",
   (req, res) => {
     res.sendFile(
-      path.join(__dirname, "public", "Wicked-London-Tickets", "index.html")
+      path.join(
+        __dirname,
+        "public",
+        "Index",
+        "Wicked-London-Tickets",
+        "index.html"
+      )
     );
   }
 );
@@ -88,14 +118,18 @@ app.get(
 app.get(
   "/things-to-do/event/430290-mamma-mia-the-musical-at-the-novello-theatre",
   (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "Mamma-Mia", "index.html"));
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Mamma-Mia", "index.html")
+    );
   }
 );
 
 app.get(
   "/things-to-do/event/430257-phantom-of-the-opera-at-his-majestys-theatre-london",
   (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "Phantom-Opera", "index.html"));
+    res.sendFile(
+      path.join(__dirname, "public", "Index", "Phantom-Opera", "index.html")
+    );
   }
 );
 
@@ -103,7 +137,7 @@ app.get(
   "/things-to-do/event/27016170-book-of-mormon-the-musical-at-the-prince-of-wales-theatre",
   (req, res) => {
     res.sendFile(
-      path.join(__dirname, "public", "Book-Of-Mormon", "index.html")
+      path.join(__dirname, "public", "Index", "Book-Of-Mormon", "index.html")
     );
   }
 );
@@ -112,66 +146,86 @@ app.get(
   "/things-to-do/event/17888493-matilda-the-musical-at-the-cambridge-theatre",
   (req, res) => {
     res.sendFile(
-      path.join(__dirname, "public", "Matilda-the-Musical", "index.html")
+      path.join(
+        __dirname,
+        "public",
+        "Index",
+        "Matilda-the-Musical",
+        "index.html"
+      )
     );
   }
 );
 
 app.get("/things-to-do/whats-on/theatre/musical", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Musicals-in-London", "index.html")
+    path.join(__dirname, "public", "Index", "Musicals-in-London", "index.html")
   );
 });
 
 app.get("/things-to-do/whats-on/theatre", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "All-Theatre", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "All-Theatre", "index.html")
+  );
 });
 
 app.get("/things-to-do/food-and-drink", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Food-And-Drink", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Food-And-Drink", "index.html")
+  );
 });
 
 app.get("/things-to-do/whats-on", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Discover-Whats-On", "index.html")
+    path.join(__dirname, "public", "Index", "Discover-Whats-On", "index.html")
   );
 });
 
 app.get("/things-to-do/experiences", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Have-Fun-With-Friends", "index.html")
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "Have-Fun-With-Friends",
+      "index.html"
+    )
   );
 });
 
 app.get("/things-to-do/nightlife", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Night-Life", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Night-Life", "index.html")
+  );
 });
 
 app.get("/things-to-do/shopping", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Go-Shopping", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Go-Shopping", "index.html")
+  );
 });
 
 app.get("/things-to-do/sightseeing/london-attraction/zoo", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Zoos-Wildlife-Parks", "index.html")
+    path.join(__dirname, "public", "Index", "Zoos-Wildlife-Parks", "index.html")
   );
 });
 
 app.get("/things-to-do", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "All-Things-To-Do", "index.html")
+    path.join(__dirname, "public", "Index", "All-Things-To-Do", "index.html")
   );
 });
 
 app.get("/sehirici-ulasim/travel-to-london", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Travel-To-London", "index.html")
+    path.join(__dirname, "public", "Index", "Travel-To-London", "index.html")
   );
 });
 
 app.get("/sehirici-ulasim/getting-around-london", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Get-Around-The-City", "index.html")
+    path.join(__dirname, "public", "Index", "Get-Around-The-City", "index.html")
   );
 });
 
@@ -179,18 +233,20 @@ app.get(
   "/sehirici-ulasim/essential-information/accessible-london",
   (req, res) => {
     res.sendFile(
-      path.join(__dirname, "public", "Accessible-London", "index.html")
+      path.join(__dirname, "public", "Index", "Accessible-London", "index.html")
     );
   }
 );
 
 app.get("/dersim-stiftung/hotel", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Book-a-Hotel", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Book-a-Hotel", "index.html")
+  );
 });
 
 app.get("/sehirici-ulasim/essential-information", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Know-The-Essentials", "index.html")
+    path.join(__dirname, "public", "Index", "Know-The-Essentials", "index.html")
   );
 });
 
@@ -205,7 +261,9 @@ app.get("/dersim-stiftung", (req, res) => {
 });
 
 app.get("/virtual", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Virtual", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "public", "Index", "Virtual", "index.html")
+  );
 });
 
 app.get("/things-to-do/place/427311-buckingham-palace", (req, res) => {
