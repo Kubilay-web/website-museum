@@ -3,16 +3,13 @@ const path = require("path");
 const cors = require("cors");
 
 const app = express();
+const port = 3001;
 
 app.use(
   cors({
-    origin: "*", // Allows all origins, you can specify a particular domain instead of '*'
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
-    allowedHeaders: ["Content-Type", "Authorization"], // Specify allowed headers
+    origin: "*", // Herhangi bir kaynaktan gelen isteklere izin verir
   })
 );
-
-const port = 3001;
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/public", express.static(path.join(__dirname, "public")));
