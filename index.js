@@ -952,7 +952,7 @@ app.get("/tarihimiz/ulukale", (req, res) => {
 //GERMAN
 
 app.get("/de", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Index", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "Index-German", "index.html"));
 });
 
 app.get("/de/things-to-do/sightseeing/london-attraction", (req, res) => {
@@ -1900,6 +1900,13 @@ app.get("/en", (req, res) => {
 });
 
 //ENGLİSH
+
+//KURDİSH//
+app.get("/kr", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Index-Kurdish", "index.html"));
+});
+
+//KURDİSH//
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
