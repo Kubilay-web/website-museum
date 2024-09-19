@@ -3,7 +3,14 @@ const path = require("path");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "*", // Allows all origins, you can specify a particular domain instead of '*'
+    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Specify allowed headers
+  })
+);
 
 const port = 3001;
 
