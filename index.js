@@ -1908,6 +1908,13 @@ app.get("/kr", (req, res) => {
 
 //KURDİSH//
 
+//Zazaki//
+app.get("/zaz", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Index-Zaza", "index.html"));
+});
+
+//Zazaki//
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
