@@ -1899,6 +1899,8 @@ app.get("/en", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "Index-English", "index.html"));
 });
 
+//ENGLİSH
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
