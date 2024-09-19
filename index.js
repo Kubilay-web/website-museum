@@ -1893,6 +1893,12 @@ app.get("/de/tarihimiz/ulukale", (req, res) => {
 
 //GERMAN END
 
+//ENGLİSH
+
+app.get("/en", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Index-English", "index.html"));
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
