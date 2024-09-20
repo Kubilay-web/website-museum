@@ -7,9 +7,21 @@ const port = 3001;
 
 app.use(
   cors({
-    origin: "*", // Herhangi bir kaynaktan gelen isteklere izin verir
+    origin: "*",
   })
 );
+
+app.use((req, res, next) => {
+  // Temiz URL oluştur
+  const cleanUrl = req.protocol + "://" + req.get("host") + req.path;
+
+  // Eğer sorgu parametreleri varsa yönlendir
+  if (req.query && Object.keys(req.query).length > 0) {
+    return res.redirect(cleanUrl);
+  }
+
+  next(); // İleriye devam et
+});
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/public", express.static(path.join(__dirname, "public")));
@@ -96,14 +108,10 @@ app.get("/things-to-do/openspace", (req, res) => {
   );
 });
 
-app.get("/things-to-do/sightseeing", (req, res) => {
+app.get("/tarihimiz/hepsini-goruntuleyin", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "All-Sightseeing", "index.html")
   );
-});
-
-app.get("/things-to-do/sightseeing", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "All-Sightseeing", "index.html"));
 });
 
 app.get(
@@ -169,7 +177,7 @@ app.get("/things-to-do/whats-on/theatre/musical", (req, res) => {
   );
 });
 
-app.get("/things-to-do/whats-on/theatre", (req, res) => {
+app.get("/inanc-merkezleri/hepsini-goruntuleyin", (req, res) => {
   res.sendFile(
     path.join(__dirname, "public", "Index", "All-Theatre", "index.html")
   );
