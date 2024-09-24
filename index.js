@@ -110,7 +110,7 @@ app.get("/things-to-do/openspace", (req, res) => {
 
 app.get("/tarihimiz/hepsini-goruntuleyin", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index", "All-Sightseeing", "index.html")
+    path.join(__dirname, "public", "Index", "Tarihimiz-Hepsi", "index.html")
   );
 });
 
@@ -179,7 +179,13 @@ app.get("/things-to-do/whats-on/theatre/musical", (req, res) => {
 
 app.get("/inanc-merkezleri/hepsini-goruntuleyin", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index", "All-Theatre", "index.html")
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanç-Merkezleri-Hepsi",
+      "index.html"
+    )
   );
 });
 
@@ -1120,7 +1126,13 @@ app.get("/de/things-to-do/whats-on/theatre/musical", (req, res) => {
 
 app.get("/de/things-to-do/whats-on/theatre", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "public", "Index", "All-Theatre", "index.html")
+    path.join(
+      __dirname,
+      "public",
+      "Index",
+      "İnanç-Merkezleri-Hepsi",
+      "index.html"
+    )
   );
 });
 
