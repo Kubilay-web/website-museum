@@ -277,6 +277,106 @@
   </style>
 
 
+  <style>
+    .three-column-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100vw;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 0px 30px 0px;
+    }
+
+    .custom-tile {
+      width: 305px;
+      height: 305px;
+      overflow: hidden;
+      position: relative;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-tile a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .custom-imgbox {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .custom-imgbox img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .custom-tile:hover .custom-imgbox img {
+      transform: scale(1.1);
+    }
+
+    .custom-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      transition: transform 0.6s ease;
+    }
+
+    .custom-textbox {
+      box-sizing: border-box;
+      text-align: center;
+      height: 55px;
+    }
+
+    .custom-title {
+      font-size: 26px;
+      font-family: Proxima Nova;
+      color: white;
+    }
+
+    .custom-desc {
+      font-size: 18px;
+      font-family: Proxima Nova;
+      color: white;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: transform 0.4s ease;
+    }
+
+
+    .custom-tile:hover .custom-title {
+      text-decoration: underline;
+    }
+
+
+    .custom-tile:hover .custom-desc {
+      opacity: 1;
+      transform: translateY(-3);
+    }
+
+    .custom-tile:hover .custom-textbox {
+      transform: translateY(-30px);
+    }
+
+    h3.custom-title {
+      font-size: 24px;
+    }
+  </style>
+
+
+
 </head>
 
 <body class="sticky-nav-init">
@@ -285,170 +385,17 @@
     </script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("consent", "default", {
-        ad_personalization: "denied",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        analytics_storage: "denied",
-        functionality_storage: "denied",
-        personalization_storage: "denied",
-        security_storage: "granted",
-        wait_for_update: 500,
-      });
-      gtag("set", "ads_data_redaction", true);
-      gtag("set", "url_passthrough", true);
     </script>
   </div>
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
 
-      j.addEventListener("load", function () {
-        var _ge = new CustomEvent("gtm_loaded", { bubbles: true });
-        d.dispatchEvent(_ge);
-      });
-
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-5QFXCMC");
-  </script>
   <script src="/public/Index/İnanç-Merkezleri-Hepsi/js/10042148-10042640.js">
   </script>
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BDFPSHTGM0">
   </script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-BDFPSHTGM0", {
-      dimension8: "Hilton - Ecommerce promo",
-      site_section: "Things To Do",
-      page_locale: "en_GB",
-      page_template: "Editorial - Landing Page",
-    });
   </script>
   <script async="" src="/public/Index/İnanç-Merkezleri-Hepsi/js/gpt.js">
-  </script>
-  <script>
-    var googletag = googletag || {};
-    googletag.cmd = googletag.cmd || [];
-  </script>
-  <script>
-    var slots = {};
-    googletag.cmd.push(function () {
-      var mapping_ad_lp_dmpu = googletag
-        .sizeMapping()
-        .addSize([0, 0], [300, 250])
-        .addSize([755, 100], [728, 90])
-        .addSize([1020, 0], [300, 250])
-        .addSize([1020, 900], [300, 600])
-        .build();
-      var mapping_ad_sidebar_dmpu = googletag
-        .sizeMapping()
-        .addSize([0, 0], [300, 250])
-        .addSize([755, 900], [300, 600])
-        .build();
-      var mapping_ad_search_mpu1 = googletag
-        .sizeMapping()
-        .addSize([0, 0], [300, 250])
-        .build();
-      var mapping_ad_search_mpu2 = googletag
-        .sizeMapping()
-        .addSize([0, 0], [300, 250])
-        .build();
-      if (!!document.getElementById("ad_lp_dmpu")) {
-        slots["ad_lp_dmpu"] = googletag
-          .defineSlot(
-            "/70940382/VL-Things-To-Do/VL-Things-To-Do-Whats-On-HP-Theatre-DMPU",
-            [
-              [300, 600],
-              [728, 90],
-              [300, 250],
-            ],
-            "ad_lp_dmpu"
-          )
-          .defineSizeMapping(mapping_ad_lp_dmpu)
-          .setCollapseEmptyDiv(true)
-          .addService(googletag.pubads());
-      }
-      if (!!document.getElementById("ad_sidebar_dmpu")) {
-        slots["ad_sidebar_dmpu"] = googletag
-          .defineSlot(
-            "/70940382/VL-Things-To-Do/VL-Things-To-Do-Whats-On-HP-Theatre-DMPU",
-            [
-              [300, 600],
-              [300, 250],
-            ],
-            "ad_sidebar_dmpu"
-          )
-          .defineSizeMapping(mapping_ad_sidebar_dmpu)
-          .setCollapseEmptyDiv(true)
-          .addService(googletag.pubads());
-      }
-      if (!!document.getElementById("ad_search_mpu1")) {
-        slots["ad_search_mpu1"] = googletag
-          .defineSlot(
-            "/70940382/VL-Things-To-Do/VL-Things-To-Do-Whats-On-HP-Theatre-MPU",
-            [300, 250],
-            "ad_search_mpu1"
-          )
-          .defineSizeMapping(mapping_ad_search_mpu1)
-          .setCollapseEmptyDiv(true)
-          .addService(googletag.pubads());
-      }
-      if (!!document.getElementById("ad_search_mpu2")) {
-        slots["ad_search_mpu2"] = googletag
-          .defineSlot(
-            "/70940382/VL-Things-To-Do/VL-Things-To-Do-Whats-On-HP-Theatre-MPU",
-            [300, 250],
-            "ad_search_mpu2"
-          )
-          .defineSizeMapping(mapping_ad_search_mpu2)
-          .setCollapseEmptyDiv(true)
-          .addService(googletag.pubads());
-      }
-
-      googletag.pubads().enableSingleRequest();
-
-      googletag
-        .pubads()
-        .addEventListener("slotRenderEnded", function (event) {
-          var adSlot = document.getElementById(event.slot.getSlotElementId());
-          if (!adSlot) {
-            return;
-          }
-          if (!event.isEmpty) {
-            if (
-              !adSlot.parentElement.querySelector("span.advert-heading") &&
-              !adSlot.classList.contains("advert-noheading")
-            ) {
-              var adHeader = document.createElement("span");
-              adHeader.className = "advert-heading";
-              adHeader.innerText = "Advertisement";
-              adSlot.parentElement.insertBefore(adHeader, adSlot);
-            }
-          } else if (
-            adSlot.parentElement.classList.contains("advert-search-grid")
-          ) {
-            adSlot.parentElement.style.display = "none";
-          }
-        });
-      googletag.enableServices();
-    });
-  </script>
-  <meta content="638591420453811763" name="VIcurrentDateTime" />
-  <meta content="/" name="VirtualFolder" />
-  <script src="/layouts/system/VisitorIdentification.js" type="text/javascript">
   </script>
 
 
@@ -1517,7 +1464,7 @@
       </div>
 
 
-      <div class="gw cw1600 cf below-hero">
+      <!-- <div class="gw cw1600 cf below-hero">
         <div>
           <div class="row4-feature">
 
@@ -1526,14 +1473,9 @@
             </div>
 
 
-
-
-
-
-
             <div class="panel mosaic-four-tiles cf">
               <div class="mosaic three-column">
-                <!-- <div class="tile">
+                 <div class="tile">
                   <a href="/seyit-mahmut-ocagi">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -1555,7 +1497,7 @@
                       </div>
                     </div>
                   </a>
-                </div> -->
+                </div> 
 
                 <div class="tile tile-three-column">
                   <a href="/sari-saltuk-ocagi">
@@ -1581,7 +1523,7 @@
                   </a>
                 </div>
 
-                <!-- <div class="tile">
+                 <div class="tile">
                   <a href="/inanc-merkezleri/dervis-cemal">
                     <div class="imgbox">
                       <img alt="" height="424" loading="lazy" src="/public/Index/İnanç-Merkezleri-Hepsi/images/derviş cemal türbesi.jpg"
@@ -1601,7 +1543,7 @@
                       </div>
                     </div>
                   </a>
-                </div> -->
+                </div> 
 
                 <div class="tile">
                   <a href="/sari-saltuk-ocagi">
@@ -1648,7 +1590,7 @@
                     </div>
                   </a>
                 </div>
-                <!-- <div class="tile">
+                <div class="tile">
                   <a href="/baba-mansur-ocagi">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -1671,8 +1613,8 @@
                       </div>
                     </div>
                   </a>
-                </div> -->
-                <!-- <div class="tile">
+                </div> 
+                 <div class="tile">
                   <a href="/inanc-merkezleri/munzur-baba">
                     <div class="imgbox">
                       <img alt="" height="424" loading="lazy" src="/public/Index/İnanç-Merkezleri-Hepsi/images/munzur baba ocağı.jpg"
@@ -1692,7 +1634,7 @@
                       </div>
                     </div>
                   </a>
-                </div> -->
+                </div> 
               </div>
             </div>
 
@@ -1700,7 +1642,7 @@
 
             <div style="padding:20px 0px 0px 0px;" class="panel mosaic-four-tiles cf">
               <div class="mosaic">
-                <!-- <div class="tile">
+                 <div class="tile">
                   <a href="/celebi-baba-ziyareti">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -1722,7 +1664,7 @@
                       </div>
                     </div>
                   </a>
-                </div> -->
+                </div> 
                 <div class="tile">
                   <a href="/sari-saltuk-ocagi">
                     <span class="callout-ribbon below-date">
@@ -1798,7 +1740,7 @@
 
 
 
-                <!-- <div class="tile">
+              <div class="tile">
                   <a href="/inanc-merkezleri/duzgun-baba">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -1821,9 +1763,9 @@
                       </div>
                     </div>
                   </a>
-                </div> -->
+                </div> 
 
-                <!-- <div class="tile">
+                 <div class="tile">
                   <a href="/inanc-merkezleri/duzgun-baba">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -1846,7 +1788,7 @@
                       </div>
                     </div>
                   </a>
-                </div> -->
+                </div> 
 
               </div>
             </div>
@@ -1856,7 +1798,105 @@
 
           </div>
         </div>
+      </div> -->
+
+
+
+      <!-- Three Column -->
+      <div class="three-column-container">
+        <div class="custom-tile">
+          <a href="/sari-saltuk-ocagi">
+            <div class="custom-imgbox">
+              <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/seyit mahmut hayrani.jpg"
+                alt="Seyid Büklü Dede Türbesi" />
+            </div>
+            <div class="custom-overlay">
+              <div class="custom-textbox">
+                <h3 class="custom-title">Seyid Büklü Dede Türbesi</h3>
+                <p class="custom-desc">Seyid Büklü Dede Türbesi</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="custom-tile">
+          <a href="/sari-saltuk-ocagi">
+            <div class="custom-imgbox">
+              <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/büyük çeşme ziyareti.jpg"
+                alt="Büyük Çeşme Ziyareti" />
+            </div>
+            <div class="custom-overlay">
+              <div class="custom-textbox">
+                <h3 class="custom-title">Büyük Çeşme Türbesi</h3>
+                <p class="custom-desc">Büyük Çeşme Türbesi</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="custom-tile">
+          <a href="/sari-saltuk-ocagi">
+            <div class="custom-imgbox">
+              <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/seyit kasım türbesi.jpg" alt="Pir Ali Ziyareti" />
+            </div>
+            <div class="custom-overlay">
+              <div class="custom-textbox">
+                <h3 class="custom-title">Seyit Kasım Türbesi</h3>
+                <p class="custom-desc">Seyit Kasım Türbesi</p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
+
+      <div class="three-column-container">
+        <div class="custom-tile">
+          <a href="/sari-saltuk-ocagi">
+            <div class="custom-imgbox">
+              <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/pi sultan apdal ocağı.webp"
+                alt="Seyid Büklü Dede Türbesi" />
+            </div>
+            <div class="custom-overlay">
+              <div class="custom-textbox">
+                <h3 class="custom-title">Pir Sultan Abdal Ocağı</h3>
+                <p class="custom-desc">Pir Sultan Abdal Ocağı</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="custom-tile">
+          <a href="/sari-saltuk-ocagi">
+            <div class="custom-imgbox">
+              <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/derviş gülabi ziyaret.jpg"
+                alt="Büyük Çeşme Ziyareti" />
+            </div>
+            <div class="custom-overlay">
+              <div class="custom-textbox">
+                <h3 class="custom-title">
+                  Derviş Gülabi Ziyaretgahı
+                </h3>
+                <p class="custom-desc">
+                  Derviş Gülabi Ziyaretgahı
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="custom-tile">
+          <a href="/sari-saltuk-ocagi">
+            <div class="custom-imgbox">
+              <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/gole çeto ziyareti.jpg" alt="Pir Ali Ziyareti" />
+            </div>
+            <div class="custom-overlay">
+              <div class="custom-textbox">
+                <h3 class="custom-title">Gole Çeto Ziyareti</h3>
+                <p class="custom-desc">Gole Çeto Ziyareti</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Three Column -->
 
     </div>
   </main>
@@ -2036,7 +2076,7 @@
                   </a>
                 </div> -->
 
-                <div class="tile">
+                <!-- <div class="tile">
                   <a href="/inanc-merkezleri/munzur-baba">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -2059,7 +2099,7 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
                 <!-- <div class="tile">
                   <a href="/inanc-merkezleri/duzgun-baba">
                     <span class="callout-ribbon below-date">
@@ -2105,7 +2145,7 @@
                     </div>
                   </a>
                 </div> -->
-                <div class="tile">
+                <!-- <div class="tile">
                   <a href="/inanc-merkezleri/munzur-baba">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -2128,9 +2168,9 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
 
-                <div class="tile">
+                <!-- <div class="tile">
                   <a href="/inanc-merkezleri/munzur-baba">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -2152,7 +2192,7 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
 
 
                 <!-- <div class="tile">
@@ -2185,7 +2225,7 @@
               <div class="mosaic">
 
 
-                <div class="tile">
+                <!-- <div class="tile">
                   <a href="/inanc-merkezleri/munzur-baba">
                     <span class="callout-ribbon below-date">
                       Always sells out
@@ -2207,7 +2247,7 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
                 <!-- <div class="tile">
                   <a href="/inanc-merkezleri/pir-sultan-abdal">
                     <span class="callout-ribbon below-date">
@@ -2255,7 +2295,7 @@
                   </a>
                 </div> -->
 
-                <div class="tile">
+                <!-- <div class="tile">
                   <a href="/inanc-merkezleri/munzur-baba">
                     <div class="imgbox">
                       <img alt="" height="424" loading="lazy"
@@ -2275,10 +2315,10 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
 
 
-                <div class="tile">
+                <!-- <div class="tile">
                   <a href="/inanc-merkezleri/munzur-baba">
                     <div class="imgbox">
                       <img alt="" height="424" loading="lazy"
@@ -2298,7 +2338,10 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
+
+
+
 
                 <!-- <div class="tile">
                   <a href="/gole-ceto-ziyareti">
@@ -2385,6 +2428,93 @@
 
     </div>
   </main>
+
+
+  <div class="three-column-container">
+    <div class="custom-tile">
+      <a href="/inanc-merkezleri/munzur-baba">
+        <div class="custom-imgbox">
+          <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/kırklar dağı türbesi.jfif"
+            alt="Seyid Büklü Dede Türbesi" />
+        </div>
+        <div class="custom-overlay">
+          <div class="custom-textbox">
+            <h3 class="custom-title">Kırklar Dağı Ziyareti</h3>
+            <p class="custom-desc">Kırklar Dağı Ziyareti</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="custom-tile">
+      <a href="/inanc-merkezleri/munzur-baba">
+        <div class="custom-imgbox">
+          <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/BABA MANSUR OCAĞI.jpg" alt="Büyük Çeşme Ziyareti" />
+        </div>
+        <div class="custom-overlay">
+          <div class="custom-textbox">
+            <h3 class="custom-title">Baba Mansur Ocağı</h3>
+            <p class="custom-desc">Baba Mansur Ocağı</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="custom-tile">
+      <a href="/inanc-merkezleri/munzur-baba">
+        <div class="custom-imgbox">
+          <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/ali baba türbesi.jpg" alt="Pir Ali Ziyareti" />
+        </div>
+        <div class="custom-overlay">
+          <div class="custom-textbox">
+            <h3 class="custom-title">Pir Ali Ziyareti</h3>
+            <p class="custom-desc">Pir Ali Ziyareti</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="three-column-container">
+    <div class="custom-tile">
+      <a href="/inanc-merkezleri/munzur-baba">
+        <div class="custom-imgbox">
+          <img src="/public/Index/Çelebi-Baba-Ziyareti/images/image-04.jpg" alt="Seyid Büklü Dede Türbesi" />
+        </div>
+        <div class="custom-overlay">
+          <div class="custom-textbox">
+            <h3 class="custom-title">Çelebi Baba Ziyareti</h3>
+            <p class="custom-desc">Çelebi Baba Ziyareti</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="custom-tile">
+      <a href="/inanc-merkezleri/munzur-baba">
+        <div class="custom-imgbox">
+          <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/çoban baba.jpg" alt="Büyük Çeşme Ziyareti" />
+        </div>
+        <div class="custom-overlay">
+          <div class="custom-textbox">
+            <h3 class="custom-title">Çoban Baba Türbesi</h3>
+            <p class="custom-desc">Çoban Baba Türbesi</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="custom-tile">
+      <a href="/inanc-merkezleri/munzur-baba">
+        <div class="custom-imgbox">
+          <img src="/public/Index/İnanç-Merkezleri-Hepsi/images/çoban baba.jpg" alt="Pir Ali Ziyareti" />
+        </div>
+        <div class="custom-overlay">
+          <div class="custom-textbox">
+            <h3 class="custom-title">Turabi Baba Türbesi</h3>
+            <p class="custom-desc">Turabi Baba Türbesi</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 
 
 
@@ -3046,11 +3176,6 @@
     </div>
 
   </footer>
-
-
-
-
-
 
 
   <script>
