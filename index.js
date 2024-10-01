@@ -394,6 +394,10 @@ app.get("/tarihimiz/ulukale", (req, res) => {
   );
 });
 
+app.get("/sitemap.xml", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Index", "sitemap.xml"));
+});
+
 // TURKİSH END
 
 //GERMAN
